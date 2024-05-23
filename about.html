@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Lakshmi Sanju</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(71, 71, 135);
+            color: white;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(35, 35, 87);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgba(187, 138, 236, 0.826);
+            font-size: 1.04rem;
+        }
+
+       
+     header nav .right .active{
+           background-color: white;
+           color:black
+        }
+
+        .secondSection {
+            flex: display;
+            max-width: 80vw;
+            margin-left: 155px;
+            height: 80vh;
+        }
+
+        .secondSection h1 {
+            font-size: 1.9rem;
+        }
+
+        .secondSection .box {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+            background: rgb(35, 35, 87);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 1000px;
+            width: 90%;
+            margin: 30px 30px 30px 30px;
+            padding-bottom: 60px;
+        }
+
+        .secondSection .box .uls{
+                 margin:0px 20px 20px 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left">Lakshmi Sanju's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About Me</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                    <li><a href="gallery.html">My Gallery</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="secondSection">
+            <h1>About Me</h1>
+            <div class="box">
+                <h4 style="color:rgb(23, 13, 13);">CAREER OBJECTIVE</h4>
+                <p>To get an opportunity that allows me to maximize my potential while driving the organization’s growth. Eager to secure a role in a dynamic company where I can start my career and build a valuable skill set. </p>
+                <h4 style="color:rgb(23,13,13)">EDUCATION</h4>
+                <p>B.Tech - KMIT - 9.07 CGPA</p>
+                <p>Intermediate - Sri Chaitanya - 97.8%</p>
+                <p>Schooling - Brilliant Grammar High School - 9.3 CGPA</p>
+                <h4 style="color:rgb(23, 13, 13)">TECHNICAL SKILLS</h4>
+                <p>
+                    <ul class="uls">
+                        <li>
+                            Java
+                        </li>
+                        <li>
+                            CPP
+                        </li>
+                        <li>
+                            HTML, CSS, JS
+                        </li>
+                        <li>
+                            Solidity
+                        </li>
+                        <li>
+                            SDLC
+                        </li>
+                    </ul>
+                </p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
