@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lakshmi Sanju's Portfolio</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(71, 71, 135);
+            color: white;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            line-height: 1.6;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            height: 80px;
+            background-color: rgb(35, 35, 87);
+        }
+
+        nav .left {
+            font-size: 1.5rem;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: rgba(187, 138, 236, 0.826);
+        }
+
+        .active {
+            background-color: white;
+            color: black;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h1, h2 {
+            margin-bottom: 20px;
+        }
+
+        button.btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: rgb(35, 35, 87);
+            border: 2px solid black;
+            border-radius: 6px;
+            font-size: 1rem;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button.btn:hover {
+            background-color: rgba(35, 35, 87, 0.8);
+        }
+
+        .firstSection {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .leftSection {
+            flex: 1;
+            min-width: 300px;
+            margin: 20px;
+        }
+
+        .rightSection img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 8px;
+            margin: 20px;
+        }
+
+        .secondSection .box {
+            background: rgb(35, 35, 87);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            .firstSection {
+                flex-direction: column;
+                align-items: center;
+            }
+            .leftSection {
+                text-align: center;
+            }
+            .rightSection img {
+                max-width: 100%;
+                margin: 20px 0;
+            }
+            nav .left {
+                font-size: 1rem; /* Adjust font size as needed */
+                white-space: nowrap; /* Prevent text wrapping */
+                overflow: hidden; /* Hide overflow */
+                text-overflow: ellipsis; /* Show ellipsis for overflow */
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left">Lakshmi Sanju's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                    <li><a href="gallery.html">My Gallery</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="firstSection">
+            <div class="leftSection">
+                Hi, My name is <span class="purple">Lakshmi Sanju </span>
+                and I am a passionate learner.
+                <br>
+                CAREER OBJECTIVE - To get an opportunity that allows me to maximize my potential while driving the organization’s growth. Eager to secure a role in a dynamic company where I can start my career and build a valuable skill set.
+                <br>
+                <button class="btn">Download Resume</button>
+            </div>
+            <div class="rightSection">
+                <img src="developer.png" alt="photo of a developer">
+            </div>
+        </section>
+
+        <hr>
+        <section class="secondSection">
+            <span class="text-gray">What I have done so far?</span>
+            <h1>My Projects</h1>
+
+            <div class="box">
+                <h1 style="color:rgb(219,240,161);;">GateGuard Pro: Streamlining Campus Exit with React and Firebase</h1>
+                <p>
+                    Developed an automated student gate pass system using React, React Native, and Firebase, enhancing campus access management and security. Enabled students to submit requests via QR codes and provided professors with a web interface for authorization. Implemented barcode scanning technology at exit gates for added security.
+                </p>
+
+                <h1 style="color:rgb(219,240,161);;">NFT Music Decentralized App (DApp) Powered by Ethereum Blockchain</h1>
+                <p>
+                    Developed a music decentralized application (DApp) on the Ethereum blockchain, empowering users to upload, buy and sell music assets and play music. Leveraging React JS, I designed the user-friendly front-end interface, while creating smart contracts in Solidity on the Ethereum blockchain for secure music ownership and transactions. User Authentication was implemented using the Metamask Wallet. This project demonstrates my proficiency in blockchain technology and decentralized application development.
+                </p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

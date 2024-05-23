@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - Lakshmi Sanju</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(71, 71, 135);
+            color: white;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            line-height: 1.6;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            height: 80px;
+            background-color: rgb(35, 35, 87);
+        }
+
+        nav .left {
+            font-size: 1.5rem;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: rgba(187, 138, 236, 0.826);
+        }
+
+        .active {
+            background-color: white;
+            color: black;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h1, h2 {
+            margin-bottom: 20px;
+        }
+
+        button.btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: rgb(35, 35, 87);
+            border: 2px solid black;
+            border-radius: 6px;
+            font-size: 1rem;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button.btn:hover {
+            background-color: rgba(35, 35, 87, 0.8);
+        }
+
+        .secondSection .box {
+            background: rgb(35, 35, 87);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .contact-info {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        .contact-info li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-info li img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .contact-info li a, .contact-info li span {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            margin-left: 10px;
+        }
+
+        .contact-info li a:hover, .contact-info li span:hover {
+            color: rgba(187, 138, 236, 0.826);
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            .secondSection .box {
+                padding: 15px;
+            }
+            .uls {
+                padding-left: 0;
+            }
+            nav .left {
+                font-size: 1rem; /* Adjust font size as needed */
+                white-space: nowrap; /* Prevent text wrapping */
+                overflow: hidden; /* Hide overflow */
+                text-overflow: ellipsis; /* Show ellipsis for overflow */
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left">Lakshmi Sanju's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="contact.html" class="active">Contact Me</a></li>
+                    <li><a href="gallery.html">My Gallery</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="secondSection">
+            <h1>Contact Me</h1>
+            <div class="box">
+                <ul class="contact-info">
+                    <li>
+                        <img src="/git-icon.jpg" alt="GitHub">
+                        <a href="https://github.com/sanju-zemoso" target="_blank">GitHub</a>
+                    </li>
+                    <li>
+                        <img src="/ln-icon.webp" alt="LinkedIn">
+                        <a href="https://www.linkedin.com/in/lakshmi-sanju-n-b71738284/" target="_blank">LinkedIn</a>
+                    </li>
+                    <li>
+                        <img src="/mail-icon.webp" alt="Email">
+                        <span>sanjunamburu30@gmail.com</span>
+                    </li>
+                    <li>
+                        <img src="/phone-icon.png" alt="Phone">
+                        <span>8367723245</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
