@@ -30,15 +30,25 @@
 
         nav .left {
             font-size: 1.5rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        nav .right {
+            display: flex;
+            align-items: center;
         }
 
         nav ul {
             display: flex;
             justify-content: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
         }
 
         nav ul li {
-            list-style: none;
             margin: 0 15px;
         }
 
@@ -57,6 +67,12 @@
             color: black;
             padding: 5px 10px;
             border-radius: 5px;
+        }
+
+        .menu-icon {
+            display: none;
+            font-size: 2rem;
+            cursor: pointer;
         }
 
         .container {
@@ -107,19 +123,25 @@
             .container {
                 padding: 10px;
             }
-            .secondSection .box {
-                padding: 15px;
-            }
-            .uls {
-                padding-left: 0;
-            }
             nav .left {
-                font-size: 1rem; /* Adjust font size as needed */
-                white-space: nowrap; /* Prevent text wrapping */
-                overflow: hidden; /* Hide overflow */
-                text-overflow: ellipsis; /* Show ellipsis for overflow */
+                font-size: 1rem;
             }
-            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 80px;
+                right: 0;
+                background-color: rgb(35, 35, 87);
+                width: 100%;
+                text-align: right;
+            }
+            nav ul li {
+                margin: 10px 0;
+            }
+            .menu-icon {
+                display: block;
+            }
         }
     </style>
 </head>
@@ -128,6 +150,7 @@
         <nav>
             <div class="left">Lakshmi Sanju's Portfolio</div>
             <div class="right">
+                <div class="menu-icon" onclick="toggleMenu()">☰</div>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Me</a></li>
@@ -146,5 +169,16 @@
             <img src="btech.png" alt="University">
         </div>
     </main>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('nav ul');
+            if (navLinks.style.display === 'flex') {
+                navLinks.style.display = 'none';
+            } else {
+                navLinks.style.display = 'flex';
+            }
+        }
+    </script>
 </body>
 </html>
