@@ -27,19 +27,30 @@
             padding: 0 20px;
             height: 80px;
             background-color: rgb(35, 35, 87);
+            position: sticky;
         }
 
         nav .left {
             font-size: 1.5rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        nav .right {
+            display: flex;
+            align-items: center;
         }
 
         nav ul {
             display: flex;
             justify-content: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
         }
 
         nav ul li {
-            list-style: none;
             margin: 0 15px;
         }
 
@@ -58,6 +69,12 @@
             color: black;
             padding: 5px 10px;
             border-radius: 5px;
+        }
+
+        .menu-icon {
+            display: none;
+            font-size: 2rem;
+            cursor: pointer;
         }
 
         .container {
@@ -134,12 +151,24 @@
                 margin: 20px 0;
             }
             nav .left {
-                font-size: 1rem; /* Adjust font size as needed */
-                white-space: nowrap; /* Prevent text wrapping */
-                overflow: hidden; /* Hide overflow */
-                text-overflow: ellipsis; /* Show ellipsis for overflow */
+                font-size: 1rem;
             }
-            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 80px;
+                right: 0;
+                background-color: rgb(35, 35, 87);
+                width: 100%;
+                text-align: right;
+            }
+            nav ul li {
+                margin: 10px 0;
+            }
+            .menu-icon {
+                display: block;
+            }
         }
     </style>
 </head>
@@ -148,6 +177,7 @@
         <nav>
             <div class="left">Lakshmi Sanju's Portfolio</div>
             <div class="right">
+                <div class="menu-icon" onclick="toggleMenu()">☰</div>
                 <ul>
                     <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="about.html">About Me</a></li>
@@ -179,17 +209,28 @@
             <h1>My Projects</h1>
 
             <div class="box">
-                <h1 style="color:rgb(219,240,161);;">GateGuard Pro: Streamlining Campus Exit with React and Firebase</h1>
+                <h1 style="color:rgb(219,240,161);">GateGuard Pro: Streamlining Campus Exit with React and Firebase</h1>
                 <p>
                     Developed an automated student gate pass system using React, React Native, and Firebase, enhancing campus access management and security. Enabled students to submit requests via QR codes and provided professors with a web interface for authorization. Implemented barcode scanning technology at exit gates for added security.
                 </p>
 
-                <h1 style="color:rgb(219,240,161);;">NFT Music Decentralized App (DApp) Powered by Ethereum Blockchain</h1>
+                <h1 style="color:rgb(219,240,161);">NFT Music Decentralized App (DApp) Powered by Ethereum Blockchain</h1>
                 <p>
                     Developed a music decentralized application (DApp) on the Ethereum blockchain, empowering users to upload, buy and sell music assets and play music. Leveraging React JS, I designed the user-friendly front-end interface, while creating smart contracts in Solidity on the Ethereum blockchain for secure music ownership and transactions. User Authentication was implemented using the Metamask Wallet. This project demonstrates my proficiency in blockchain technology and decentralized application development.
                 </p>
             </div>
         </section>
     </main>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('nav ul');
+            if (navLinks.style.display === 'flex') {
+                navLinks.style.display = 'none';
+            } else {
+                navLinks.style.display = 'flex';
+            }
+        }
+    </script>
 </body>
 </html>
