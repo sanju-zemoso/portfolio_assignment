@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,15 +31,25 @@
 
         nav .left {
             font-size: 1.5rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        nav .right {
+            display: flex;
+            align-items: center;
         }
 
         nav ul {
             display: flex;
             justify-content: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
         }
 
         nav ul li {
-            list-style: none;
             margin: 0 15px;
         }
 
@@ -105,6 +116,12 @@
             margin-bottom: 10px;
         }
 
+        .menu-icon {
+            display: none;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+
         @media screen and (max-width: 768px) {
             .container {
                 padding: 10px;
@@ -121,7 +138,22 @@
                 overflow: hidden; /* Hide overflow */
                 text-overflow: ellipsis; /* Show ellipsis for overflow */
             }
-            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 80px;
+                right: 0;
+                background-color: rgb(35, 35, 87);
+                width: 100%;
+                text-align: right;
+            }
+            nav ul li {
+                margin: 10px 0;
+            }
+            .menu-icon {
+                display: block;
+            }
         }
     </style>
 </head>
@@ -130,6 +162,7 @@
         <nav>
             <div class="left">Lakshmi Sanju's Portfolio</div>
             <div class="right">
+                <div class="menu-icon" onclick="toggleMenu()">☰</div>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html" class="active">About Me</a></li>
@@ -144,8 +177,7 @@
         <section class="secondSection">
             <h1>About Me</h1>
             <div class="box">
-                <!-- <h4 style="color:rgb(124, 214, 34);">CAREER OBJECTIVE</h4> -->
-                <!-- <p>To get an opportunity that allows me to maximize my potential while driving the organization’s growth. Eager to secure a role in a dynamic company where I can start my career and build a valuable skill set.</p> -->
+                
                 <h4 style="color:rgb(219, 240, 161);">EDUCATION</h4>
                 <ul class="uls">
                     <li>SCHOOLING - Brilliant Grammar High School - 9.3 CGPA</li>
@@ -168,5 +200,16 @@
             </div>
         </section>
     </main>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('nav ul');
+            if (navLinks.style.display === 'flex') {
+                navLinks.style.display = 'none';
+            } else {
+                navLinks.style.display = 'flex';
+            }
+        }
+    </script>
 </body>
 </html>
